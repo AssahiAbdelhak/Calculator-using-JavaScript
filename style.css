@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, #01dc6f, #013353);
+    /* background-image: linear-gradient(90deg, red, green); */
+}
+
+.machine {
+    width: 400px;
+    height: 500px;
+    gap: 5px;
+    background: #fff;
+    display: grid;
+    grid-template-areas: "result result result result" "result result result result" "clear clear delete division" "one two three multi" "four five six plus" "seven eight nine mines" "point zero equal equal";
+}
+
+.machine div:not(.result) {
+    background-color: #bbeeea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 23px;
+    text-transform: uppercase;
+    transition: .2s all;
+    user-select: none;
+    cursor: pointer;
+}
+
+.machine div:not(.result):hover {
+    background-color: #e2f8f9;
+}
+
+.result {
+    background-color: #022f2f;
+    color: #fff;
+    position: relative;
+    user-select: none;
+}
+
+.light {
+    font-weight: 100;
+    font-size: 14px;
+    position: absolute;
+    right: 16px;
+}
+
+.bold {
+    font-weight: bolder;
+    position: absolute;
+    bottom: 5px;
+    font-size: 32px;
+    right: 10px;
+}
+
+.clear {
+    grid-area: clear;
+}
+
+.result {
+    grid-area: result;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.fiv {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.point {
+    grid-area: point;
+}
+
+.division {
+    grid-area: division;
+}
+
+.plus {
+    grid-area: plus;
+}
+
+.mines {
+    grid-area: mines;
+}
+
+.equal {
+    grid-area: equal;
+}
+
+.multi {
+    grid-area: multi;
+}
